@@ -1,154 +1,147 @@
 <!DOCTYPE html>
-<html>
+    <html>
     <head>
-
-        <!-- Meta tags Obrigatórias -->
+        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
-        <!-- <link rel="stylesheet" href="/vendor/bootstrap4/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <!-- HTML5Shiv -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <![endif]-->
+         <!-- Fontawesome -->
+         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
 
-        <!-- Google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
-
-        <!-- Estilo customizado -->
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-
-        <title>
-            Serviços de consultoria estatística
-        </title>
+        <title>Calculadora amostral</title>
     </head>
     <body>
-        
-        <header class="header-container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-flat-dark">
-            <a class="navbar-brand" href="#">
-                <div class="col-sm">
-                    <strong class="row text-white">Cobb</strong>
-                    <small class="row">Soluções em dados</small>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link text-uppercase" href="index.html">Início <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Como utilizar?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Contato</a>
-                        </li>
-                    </ul>
-                </div>
+        <header>
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                    Statscon
+                </a>
             </nav>
         </header>
 
-        <section class="mx-auto bg-flat-dark border-top">
-            <!-- <div class="container"> -->
-                <div class="d-flex flex-column py-4">
-                    <h1 class="align-self-center text-blue-flat">Calculadora de amostragem</h1>
-                    <h4 class="align-self-center">Amostragem de forma simples e rápida.</h4>
-                </div>
-            <!-- </div> -->
-        </section>
+        <div class="container">
+            <h3 class="text-justify">Calculadoras de margem de erro e tamanho da amostra para pesquisas</h3>
+            <p class="text-justify">Utilizando as calculadoras da Statscon você pode determinar um grupo amostral facilmente bem como o erro gerado por tamanho amostral pesquisado.</p>
+        </div>
 
-        <section id="calc-container">
-            <div class="container mt-4">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h3>Calculadora amostral para proporção</h3>
-                        <ul>
-                            <li class="mb-1">Encontre a quantidade de pessoas que irão compor sua amostra através de uma porcentagem ou proporção.</li>
-                            <li class="mb-1"><strong>Tamanho do universo</strong> é o conjunto total de indivíduos com a característica a ser investigada.
-                                <strong>Heterogeneidade</strong> é a diversidade do universo. Geralmente 50%.
-                                <strong>Nível de confiança</strong> é quanto maior for o nível de confiança, maior será a amostra.
-                                <strong>Margem de erro</strong> erros menores exigem amostras maiores.
-                                <strong>Amostra</strong> é a quantidade de indivíduos selecionados para participar da pesquisa.</li>
-                            <li>Indique 4 dos 5 parâmetros. Por exemplo, se indicar a amostra, universo, heterogeneidade e o nível de confiança, pode-se calcular a margem de erro. O valor calculado estará em <span class="text-danger">destaque</span>.</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Tamanho do universo</label>
-                                    <input type="number" class="form-control" id="univInput" aria-describedby="tamanhoUn" placeholder="">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Heterogeneidade (%)</label>
-                                    <input type="number" class="form-control" id="hetInput" aria-describedby="propHet" placeholder="">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Nível de confiança (%)</label>
-                                    <input type="number" class="form-control" id="confInput" aria-describedby="propConf" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Margem de erro (%)</label>
-                                    <input type="number" class="form-control" id="erroInput" aria-describedby="margemEr" placeholder="">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Amostra</label>
-                                    <input type="number" class="form-control" id="amostraInput" aria-describedby="tamanhoAm" placeholder="">
-                                </div>
-
-                                <div class="d-flex flex-column">
-                                    <button class="btn btn-calc align-self-center my-4 rounded-0 text-bold">Calcular</button>
-                                </div>
-                            </div>
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col p-3">
+                    <!-- start amostra -->
+                    <h5>Calculadora de tamanho amostral</h5>
+                    <form id="sample_calc">
+                        <div class="form-group">
+                            <label for="sp-pop">População</label>
+                            <input type="number" class="form-control" id="sp-pop" value="1000"><br>
                         </div>
-                    </div>
+            
+                        <div class="form-group">
+                            <label for="sp-err">Margem de erro (%)</label>
+                            <input type="number" class="form-control" id="sp-err" value="3"><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="sp-conf">Nível de confiança (%)</label>
+                            <select class="form-control" id="sp-conf">
+                                <option value="90">90%</option>
+                                <option value="95">95%</option>
+                                <option value="99">99%</option>
+                            </select><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="sp-dist">Distribuição da população</label>
+                            <select class="form-control" id="sp-dist"> 
+                                <option value="8020">80/20</option>
+                                <option value="5050">50/50</option>
+                            </select><br>
+                        </div>
+                        
+                        <div class="col text-center">
+                            <input type="button" class="btn btn-info" value="Calcular" onclick="calcSample()">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sp-res">Amostra:</label>
+                            <span id="sp-res">0</span>
+                        </div>
+                    </form>
+                    <!-- end amostra -->
+                    <br>
+                </div>
+
+                <div class="col p-3">
+                    <!-- start margem de erro -->
+                    <h5>Calculadora de margem de erro</h5>
+                    <form id="sample_calc">
+                        <div class="form-group">
+                            <label for="er-pop">População</label>
+                            <input type="number" class="form-control" id="er-pop" value="1000"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="er-sample">Tamanho da amostra</label>
+                            <input type="number" class="form-control" id="er-sample" value="100"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="er-conf">Nível de confiança (%)</label>
+                            <select class="form-control" id="er-conf">
+                                <option value="90">90%</option>
+                                <option value="95">95%</option>
+                                <option value="99">99%</option>
+                            </select><br>
+                        </div>
+
+                        <div class="col text-center">
+                            <input type="button" class="btn btn-info" id="er-calculate" value="Calcular" onclick="calcErr()">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="er-res">Margem de erro:</label>
+                            <span id="er-res">0%</span>
+                        </div>
+                        
+                    </form>
+                    <!-- end margem de erro -->
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="footer">
-            <div class="container">
-                <div class="row d-flex justify-content-end">
-                    Desenvolvido por <strong class="ml-2 mr-1">João Victor Rodrigues</strong>:
-                    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5586995086684" class="ml-2">
-                        <i class="fab fa-whatsapp fa-lg text-dark-flat"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/joao-victor-estatistico/" class="ml-2">
-                        <i class="fab fa-linkedin-in fa-lg text-dark-flat"></i>
-                    </a>
-                    <a href="https://www.instagram.com/jvictorrodrig/?hl=pt-br" class="ml-2">
-                        <i class="fab fa-instagram fa-lg text-dark-flat"></i>
-                    </a>
-                </div>
+        <!-- Start helper -->
+        <div class="container">
+            <h3>Dados necessários para implementar o cálculo</h3>
+            <p>É importante entender estes três termos para calcular o tamanho da amostra e margem de erro:</p>
+            <p class="text-justify"><strong>População: </strong> é o conjunto total de pessoas que se deseja estudar ou obter informações.</p>
+            <p class="text-justify"><strong>Margem de erro:</strong> é a diferença entre um resultado amostral e o verdadeiro resultado populacional.</p>
+            <p class="text-justify"><strong>Nível de confiança:</strong> indica a probabilidade de que um determinado intervalo ou estimativa esteja correto.</p>
+            <p class="text-justify"><strong>Distribuição da população:</strong> refere-se à uniformidade ou similaridade das opiniões e comportamentos dentro de um determinado grupo de pessoas pesquisadas. Se o grau de homogeneidade é alto (50/50), significa que as respostas dos participantes da pesquisa são bastante semelhantes entre si. Isso indica que o grupo compartilha características ou opiniões semelhantes, como preferências políticas, idade, localização geográfica, etc. Por outro lado, um baixo (80/20) grau de homogeneidade sugere que há uma maior diversidade de opiniões ou características dentro do grupo.</p>
+            <p class="text-justify"><strong>Amostra:</strong> é o grupo de pessoas selecionadas para representar a população total que está sendo estudada.</p>
+        </div>
+        <!-- End helper -->
+
+        <footer class="bg-transparent container">
+            <small class="d-block text-muted text-center">
+                <i class="fas fa-code fa-1x"></i> with a lot of <i class="fas fa-mug-hot fa-1x"></i> by <span class="text-bold">João Victor</span>
+            </small>
+            <div class="d-block my-2 text-center">
+                <a class="mr-1 link-warning" title="joaovictor-aragao" href="https://github.com/joaovictor-aragao"><i class="fab fa-github fa-1x"></i></a>
+                <a class="mr-1" title="@joao-victor-estatistico" href="https://www.linkedin.com/in/joao-victor-estatistico/"><i class="fab fa-linkedin-in fa-1x"></i></a>
+                <a class="mr-1" title="j.victor0205@gmail.com" href="mailto:j.victor0205@gmail.com"><i class="fas fa-at fa-1x"></i></a>
+                <a class="mr-1" title="@jvictorrodrig" href="https://www.instagram.com/jvictorrodrig/"><i class="fab fa-instagram fa-1x"></i></a>
+                <a class="mr-1" title="Whatsapp" href="https://wa.me/5586994929482"><i class="fab fa-whatsapp fa-1x"></i></a>
+                
             </div>
-        </section>
-
-        <!-- Arquivos javascript -->
-        <script src="js/script.js"></script>
-
-        <!-- Bootstrap javascript -->
-        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
-
-        <!-- jQuery scripts -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.0/d3.min.js"></script> -->
+        </footer>
 
     </body>
+
+    <script src="./js/functions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
